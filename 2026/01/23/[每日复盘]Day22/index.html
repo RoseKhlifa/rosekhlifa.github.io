@@ -19,23 +19,26 @@
   <meta name="author" content="RoseKhlifa">
   <meta name="keywords" content="">
   
-    <meta name="description" content="[算法学习]模板-二分查找根据二分性质, 某一范围的抽象值可划分为两种情况:case1 : false, … , false, true, …, true最后一个 false 被称为左分界点, 第一个 true 被称为右分界点case2 : true, …, true, false, … , false最后一个 true 被称为左分界点, 第一个 false 被称为右分界点  check(x) 为">
+    <meta name="description" content="复盘了2026-1-23的一天">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RoseKhlifa&#39;s Blog">
-<meta property="og:url" content="https://rosekhlifa.github.io/2026/01/19/[%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0]%E6%A8%A1%E6%9D%BF-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/index.html">
+<meta property="og:title" content="年度特辑[每日复盘]Day22">
+<meta property="og:url" content="https://rosekhlifa.github.io/2026/01/23/[%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98]Day22/index.html">
 <meta property="og:site_name" content="RoseKhlifa&#39;s Blog">
-<meta property="og:description" content="[算法学习]模板-二分查找根据二分性质, 某一范围的抽象值可划分为两种情况:case1 : false, … , false, true, …, true最后一个 false 被称为左分界点, 第一个 true 被称为右分界点case2 : true, …, true, false, … , false最后一个 true 被称为左分界点, 第一个 false 被称为右分界点  check(x) 为">
+<meta property="og:description" content="复盘了2026-1-23的一天">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2026-01-19T13:26:30.592Z">
-<meta property="article:modified_time" content="2026-01-19T13:37:16.573Z">
+<meta property="og:image" content="https://rosekhlifa.github.io/img/icon.png">
+<meta property="article:published_time" content="2026-01-23T14:37:12.000Z">
+<meta property="article:modified_time" content="2026-01-23T09:34:16.879Z">
 <meta property="article:author" content="RoseKhlifa">
+<meta property="article:tag" content="Daily review">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rosekhlifa.github.io/img/icon.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>RoseKhlifa&#39;s Blog</title>
+  <title>年度特辑[每日复盘]Day22 - RoseKhlifa&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="年度特辑[每日复盘]Day22"></span>
           
         </div>
 
@@ -212,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2026-01-19 21:26" pubdate>
-          January 19, 2026 pm
+        <time datetime="2026-01-23 22:37" pubdate>
+          January 23, 2026 pm
         </time>
       </span>
     
@@ -224,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          323 words
+          801 words
         
       </span>
     
@@ -235,7 +238,7 @@
         
         
         
-          3 mins
+          7 mins
         
       </span>
     
@@ -281,12 +284,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">年度特辑[每日复盘]Day22</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    Last updated on 2026-01-19T21:37:16+08:00
+                    Last updated on 2026-01-23T17:34:16+08:00
                   
                   
 
@@ -296,18 +299,10 @@
             
               <div class="markdown-body">
                 
-                <h1 id="算法学习-模板-二分查找"><a href="#算法学习-模板-二分查找" class="headerlink" title="[算法学习]模板-二分查找"></a>[算法学习]模板-二分查找</h1><p>根据二分性质, 某一范围的抽象值可划分为两种情况:<br>case1 : false, … , false, true, …, true<br>最后一个 false 被称为左分界点, 第一个 true 被称为右分界点<br>case2 : true, …, true, false, … , false<br>最后一个 true 被称为左分界点, 第一个 false 被称为右分界点</p>
-<blockquote>
-<p>check(x) 为二分性质判别函数, 输入为某个值 x, 输出为 true&#x2F;false, 功能为判断值 x 是否符合二分性质<br>例:<br>数组 [1, 2, 3, 4], 二分性质: &gt;&#x3D; 3<br>于是 [false, false, true, true]</p>
-</blockquote>
-<h3 id="模板一"><a href="#模板一" class="headerlink" title="模板一"></a>模板一</h3><p>求 case 1 时的右分界点</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">int</span> l = 左边界, r = 右边界<br><span class="hljs-keyword">while</span>(l &lt; r)<br>&#123;<br>    <span class="hljs-type">int</span> mid = l + r &gt;&gt; <span class="hljs-number">1</span>;	<span class="hljs-comment">// 右分界点, 向左取整</span><br>    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">check</span>(mid)) r = mid;	<br>    <span class="hljs-keyword">else</span> l = mid + <span class="hljs-number">1</span>;		<br>&#125;<br><span class="hljs-keyword">if</span>(<span class="hljs-built_in">check</span>(l)) <span class="hljs-keyword">return</span> l;		<span class="hljs-comment">// 查找成功</span><br><span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;                  <span class="hljs-comment">// -1 定义为查找失败应返回的值</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="模板二"><a href="#模板二" class="headerlink" title="模板二"></a>模板二</h3><p>求 case 2 时的左分界点</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">int</span> l = 左边界, r = 右边界<br><span class="hljs-keyword">while</span>(l &lt; r)<br>&#123;<br>    <span class="hljs-type">int</span> mid = l + r + <span class="hljs-number">1</span> &gt;&gt; <span class="hljs-number">1</span>;<span class="hljs-comment">// 左分界点, 向右取整</span><br>    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">check</span>(mid)) l = mid;	<br>    <span class="hljs-keyword">else</span> r = mid - <span class="hljs-number">1</span>;		<br>&#125;<br><span class="hljs-keyword">if</span>(<span class="hljs-built_in">check</span>(l)) <span class="hljs-keyword">return</span> l;		<span class="hljs-comment">// 查找成功</span><br><span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;                  <span class="hljs-comment">// -1 定义为查找失败应返回的值</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="模板三（相等）"><a href="#模板三（相等）" class="headerlink" title="模板三（相等）"></a>模板三（相等）</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">int</span> l = 左边界, r = 右边界<br><span class="hljs-keyword">while</span>(l&lt;=r)<br>&#123;<br>    <span class="hljs-type">int</span> mid = l+r&gt;&gt;<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">if</span>(nums[mid]&lt;target)l=mid<span class="hljs-number">+1</span>;<br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(nums[mid]&gt;target)r=mid<span class="hljs-number">-1</span>;<br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> mid;<br>&#125;<br></code></pre></td></tr></table></figure>
-
+                <h1 id="每日复盘-Day22-record-2026-1-23"><a href="#每日复盘-Day22-record-2026-1-23" class="headerlink" title="[每日复盘]Day22 record 2026-1-23"></a>[每日复盘]Day22 record 2026-1-23</h1><h2 id="做一下近几天的复盘"><a href="#做一下近几天的复盘" class="headerlink" title="做一下近几天的复盘"></a>做一下近几天的复盘</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><p>前些天一直在备考科目一，所以过得有些堕落，但现在想想看，好像除了备考还有很多时间是可以利用的。主要是又陷入美丽陷阱了吧！对于感情这件事我只想告诉自己：你优秀了，你想要的都能得到，何必在一个你不太喜欢的人身上浪费你的资源和精力呢？最后你也得不到你想要的人。所以过后这几天抖音的定时功能还是要开启的，最好能有在学校的觉悟，一天十分钟。消息不回即可。</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3><p>这里写一下这几天的交易心态问题吧。进了几个能指出交易方向的群，就觉得自己很无敌，并且自以为是地认为他们的方向就一定正确，我难道不是小丑吗？在币圈，水这些山寨群，只会更让你的情绪作祟，让你陷入幸存者偏差，就不想努力了（生活中如此，人总是要向上社交的），所以<strong>基本面</strong>这里还要继续磨练，现在近乎为0，总是在想什么“基本名词术语都认不全却能本金翻倍”或是什么”靠现在拙劣的技术梭哈以满足自己的物欲“，你仔细看看，哪一个问题是现实的？！也不是说不能没有目标，毕竟进入币圈的每个人都在幻想着实现财富自由，但你不能让飘渺的梦境遮住了眼啊！！！<strong>技术面</strong>这里，最近刚学了锤子线，作为反转形态在k线中起作用，就做了一个很蠢的做法，“当天晚上翻来翻去好不容易找到一个比较标准的锤子线，就直接加仓，甚至连书上写的验证方法都没有做！然而第二天起来爆仓。”这不搞笑吗？这不是纯傻逼吗？哪儿有神人不看指标不看信息只看K线就去做交易的，而且还他妈是一个最简单的k线形势？你他妈看一页书就想本金翻倍啊？你几把是谁啊？傻狗。所以还是这样说<code>在未学习完k线图和技术指标之前，不要再手贱去交易所送钱了！你不是神仙，你是煞笔。</code>在达到这个目标之前最少还有半年的路要走，到时候一鸣惊人不更好？现在一百一百的往里送？谁几把理你啊，还欠款的时候你就老实了。</p>
+<h3 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h3><p>虽说要少接触社交媒体，但我发现我缺少的一个能力或许能在提升认知上发挥很大功效：<code>在评论区辩论</code>无论有理无理，表达出自己的想法才能得到改正，才能提升认知。</p>
+<h3 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h3><p>为了稳固你的情绪，你的目标一直在这里等着你：<strong>一年买车两年买房三年实现财富自由</strong>。当学不下去的时候看看这几个字吧，或许还能意淫一下。</p>
 
                 
               </div>
@@ -315,7 +310,37 @@
             <hr/>
             <div>
               <div class="post-metas my-3">
+  
+  <div class="post-meta mr-3 d-flex align-items-center">
+    <i class="iconfont icon-category"></i>
+    
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Daily-review/" class="category-chain-item">Daily review</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+  </div>
    
+  <div class="post-meta">
+    <i class="iconfont icon-tags"></i>
+    
+    <a href="/tags/Daily-review/" class="print-no-link"
+      >#Daily review</a
+    >
+    
+  </div>
+  
 </div>
 
 
@@ -324,8 +349,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>https://rosekhlifa.github.io/2026/01/19/[算法学习]模板-二分查找/</div>
+      <div>年度特辑[每日复盘]Day22</div>
+      <div>https://rosekhlifa.github.io/2026/01/23/[每日复盘]Day22/</div>
     </div>
     <div class="license-meta">
       
@@ -337,7 +362,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>January 19, 2026</div>
+          <div>January 23, 2026</div>
         </div>
       
       
@@ -369,18 +394,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2026/01/23/%5B%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98%5DDay22/" title="年度特辑[每日复盘]Day22">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">年度特辑[每日复盘]Day22</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2026/01/18/%5B%E6%AF%8F%E6%97%A5%E5%A4%8D%E7%9B%98%5DDay17/" title="[每日复盘]Day17">
-                        <span class="hidden-mobile">[每日复盘]Day17</span>
+                      <a href="/2026/01/19/%5B%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%5D%E6%A8%A1%E6%9D%BF-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" title="">
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
